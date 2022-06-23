@@ -45,24 +45,26 @@
                         </tr>
                     </thead>
                     <tbody class="gtbody">
+                     
                         <%rows.forEach((row, index) => {%>
                             <tr >
                                 <td class="center lb">
                                     <input type="hidden" name="id" value="<%=row.id%>">
-                                    <%=row.id%>
+                                    <%= rows.length - index  %>
                                 </td>
                                 <td class="lb"><a onclick="javascript:location.href='/notice_page?id=<%=row.id%>'"><%=row.title%></a></td>
                                 <td><%=row.writer%></td>
                                 <td class="center lb"><%=row.updated%></td>
                                 <td>조회수</td>
                             </tr>
-                        <%})%>                                            
+                        <%})%>         
+                                                  
                     </tbody>
                 </table>
             </article>    
             <article class="table_num">
                 <div>
-                    <a href="#">&lt;&lt;</a>
+                    <!--<a href="#">&lt;&lt;</a>
                     <a href="#">&lt;</a>
                     <a class="pass" href="#">1</a>
                     <a href="#">2</a>
@@ -75,7 +77,8 @@
                     <a href="#">9</a>
                     <a href="#">10</a>
                     <a class="pass" href="#">></a>
-                    <a  href="#">>></a>
+                    <a  href="#">>></a>-->
+                   
                 </div>    
             </article>  
             <div class="main_b_wrap">
