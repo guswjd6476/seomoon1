@@ -1,0 +1,78 @@
+        <div class="headban gheadban">            
+            <div class="middle_wrap">
+                <h1>공지사항</h1>
+                <ul class="mnavi">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">행사안내</a></li>
+                    <li><a href="#">언론보도</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>       
+        </div>    
+    </header>
+    <main>
+        <section class="wrap1200 page_wrap">
+            <div class="btn_share_wrap">
+                <a class="btn_share" href=""></a>
+            </div>
+            <form method="get" action="/notice_page">
+            <input type="hidden" name="id" value="<%=row.id%>">
+            <table>
+                <% if(typeof errs !== 'undefined'){ %>
+                    <%errs.forEach(()=>{%>
+                        <h3><%=err.param%> : <%=err.msg%></h3>
+                    <%})%>
+                <%}%>
+                <colgroup>
+                    <col width="15%">
+                    <col width="30%">
+                    <col width="15%">
+                    <col width="30%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td colspan="4" id="title">
+                            <%= row.title%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="minititle">작성자</td>
+                        <td id="writer"><%= row.writer%></td>
+                        <td class="minititle">날짜</td>
+                        <td id="date"><%= row.created%></td>
+                    </tr>
+                    <tr>
+                        <td class="minititle">첨부파일</td>
+                        <td colspan="3" id="img">
+                            <span class="down">
+                                <img src="../img/seomoon/button/icon_file.png">
+                                <a href=""> (개인)홈페이지상점정보추가.hwp (12 kb)</a>
+                            </span>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  class="borderg">
+                        <td id="tablecontent" colspan="4">
+                            <%= row.content%>
+                        </td>
+                    </tr>
+                    <tr class="borderg">
+                        <td class="minititle">다음글</td>
+                        <td colspan="3" id="subtitle">서문,칠성야시장 매대운영자 모집공고</td>
+                    </tr>
+                    <tr class="borderg">
+                        <td class="minititle">이전글</td>
+                        <td colspan="3" id="subtitle">서문야시장 '22년 3월 영업 공지'</td>
+                    </tr>
+                </tbody>
+            </table>  
+            </form>          
+            <div class="btn_table_list">
+                <a href="notice">목록</a>
+            </div>
+            <input type="button" value="수정" onclick="javascript:location.href='/updateMemo?id=<%=row.id%>'">
+                <input type="button" value="삭제" onclick="javascript:location.href='/deleteMemo?id=<%=row.id%>'">            
+        </section>
+    </main>
+   

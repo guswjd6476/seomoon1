@@ -1,0 +1,67 @@
+
+        <div class="headban">
+            <img src="../img/seomoon/gongziban_copy.png">
+            <div class="middle_wrap">
+                <h1>공지사항</h1>
+                <ul class="mnavi">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">행사안내</a></li>
+                    <li><a href="#">언론보도</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>       
+        </div>    
+    </header>
+    <main>
+        <section class="writesection">
+            <% if(typeof errs !== 'undefined'){ %>
+                <%errs.forEach(()=>{%>
+                    <h3><%=err.param%> : <%=err.msg%></h3>
+                <%})%>
+            <%}%>
+            <h2>공지사항 작성하기</h2>
+            <form method="POST" action="/store">
+                <table border="1" id="w_table">
+                    <colgroup>
+                        <col style="width: 18%;">
+                    </colgroup>
+                    <tbody>
+                          <tr>
+                              <th>
+                                  <span class="impt">이름</span>
+                              </th>
+                              <td>
+                                  <div class="form_name">
+                                      <input type="text" name="writer" class="input_p name_im" style="width: 30%;">
+                                  </div>
+                              </td>
+                          </tr>
+                        <tr>
+                            <th>
+                                <span class="impt">제목</span>
+                            </th>
+                            <td>
+                                <div class="form_title">
+                                   <input type="text" name="title" class="input_title" style="width: 100%;">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span class="impt">내용</span>
+                            </th>
+                            <td>
+                                <div class="form_text">
+                                    <textarea name="content" style="width: 100%;"></textarea>
+                                </div>
+                            </td>
+                        </tr>
+                      </tbody>
+                </table>
+                <input type="submit" value="submit">
+                <input type="button" value="back" onclick="javascript:location.href ='notice'">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

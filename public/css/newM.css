@@ -1,0 +1,12 @@
+.impt {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+.writesection {
+    width: 1200px;
+}
+.writesection form {
+    margin: auto;
+}

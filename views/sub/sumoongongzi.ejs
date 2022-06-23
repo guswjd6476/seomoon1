@@ -1,0 +1,86 @@
+
+  
+        <div class="headban gheadban">   
+            <div class="middle_wrap">
+                <h1>공지사항</h1>
+                <ul class="mnavi">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">행사안내</a></li>
+                    <li><a href="#">언론보도</a></li>
+                    <li><a href="#">입점문의</a></li>
+                </ul>
+            </div>       
+        </div>    
+    <main>
+        <section class="wrap1200 table_search_wrap">
+            <article class="search_wrap">
+                <h4>SEARCH</h4>
+                <div class="search_scroll_box">
+                    <select class="search_scroll">
+                        <option>제목</option>
+                        <option>내용</option>
+                    </select>
+                </div>
+                <div class="search_textbox">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <div class="search_click"></div>
+                </div>    
+            </article>
+            <article class="gtablelist_wrap">
+                <table>
+                    <colgroup>
+                        <col class="num">
+                        <col class="title">
+                        <col class="gone">
+                        <col class="num">
+                        <col class="gone">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>글쓴이</th>
+                            <th>날짜</th>
+                            <th>조회</th>
+                        </tr>
+                    </thead>
+                    <tbody class="gtbody">
+                        <%rows.forEach((row, index) => {%>
+                            <tr >
+                                <td class="center lb">
+                                    <input type="hidden" name="id" value="<%=row.id%>">
+                                    <%=row.id%>
+                                </td>
+                                <td class="lb"><a onclick="javascript:location.href='/notice_page?id=<%=row.id%>'"><%=row.title%></a></td>
+                                <td><%=row.writer%></td>
+                                <td class="center lb"><%=row.updated%></td>
+                                <td>조회수</td>
+                            </tr>
+                        <%})%>                                            
+                    </tbody>
+                </table>
+            </article>    
+            <article class="table_num">
+                <div>
+                    <a href="#">&lt;&lt;</a>
+                    <a href="#">&lt;</a>
+                    <a class="pass" href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a class="pass" href="#">></a>
+                    <a  href="#">>></a>
+                </div>    
+            </article>  
+            <div class="main_b_wrap">
+                <a href="newM">글쓰기</a>
+            </div>          
+        </section>
+    </main>
+    
