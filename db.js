@@ -1,10 +1,10 @@
 const mysql      = require('mysql');
 const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '1234',
+  host     : 'b2cefe4a61e0d9',
+  user     : 'us-cdbr-east-05.cleardb.net',
+  password : 'de046950',
   port : '3306',
-  database : 'seomoon',
+  database : 'heroku_f43452ff03d4698',
   dateStrings : 'date'
 });
  //리스트 전체 불러오기
