@@ -1,6 +1,13 @@
 header{
     width: 100%;
     position: relative;
+    background-color: rgba(75, 23, 122);
+}
+header.sticky {
+    position: fixed;
+    background-color: rgba(75, 23, 122, 0.8);
+    top: 0px;
+    z-index: 999;
 }
 .wrap100{
     width: 100%;
@@ -33,13 +40,7 @@ header{
 .wrap1200_htop a:hover{
     text-decoration: underline;
 }
-.top{
-    background-color: rgba(75, 23, 122);
-    width: 100%;
-    position:sticky;
-    top: 0px; 
-    z-index: 999;
-}
+
 .wrap1200_top{
     width: 1200px;
     display: flex;
@@ -56,16 +57,9 @@ header{
     background-size: 100%;
     background-repeat: no-repeat;
 }
-.mobileser{
-    display: none;
-    width: 80px;
-    height: 80px;
-    background-image: url(../img/seomoon/top/m_search.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+
 .logo{
-    z-index: 999;
+    z-index: 9999;
     width: 120px;
     height: 80px;
     background-image: url(../img/seomoon/logo.png);
@@ -663,6 +657,7 @@ footer{
     .navi{
         display: none;
     }
+   
     .mobilenav{
         display: block;
     }

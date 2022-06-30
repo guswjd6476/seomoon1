@@ -1,4 +1,6 @@
-
+body{
+    position: relative;
+}
 .h_top{
     background-color: #0f0f10; 
 }
@@ -9,6 +11,7 @@
     overflow: hidden;
     width: 100%;
     position: relative;
+    height: calc(100vh - 110px);
 }
 .full_header>.full_header_logo{
     display: block;
@@ -25,7 +28,7 @@
     opacity: 0.7;
 }
 .full_header_img{    
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin: auto;
     position: relative;
@@ -46,17 +49,126 @@
     text-indent: -9999px;
 }
 
+.mclose_wrap{
+    width: 100%;
+    height: 60px;
+    background-color: #072f49;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+a.mclose{
+    box-sizing: border-box;
+    position: absolute; 
+    right: 10px; 
+    top: -5px; 
+    color: #edbd03;
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 900;
+}
+.left_gnbWrap{
+    height: 100%;
+    width: 100%;
+    position: fixed; 
+    left: -100%; 
+    top: 0;
+    background-color: rgba(7, 47, 73, 0.8);
+    z-index: 9999;
+    transition: all 0.3s;
+}
+.left_gnbWrap.on{
+    left:0;
+}
+.left_gnb>li{
+    width: 100%;
+    border-bottom: 1px solid #c3c3c3;
+}
+.left_gnb>li>a{
+    font-size: 16px;
+    display: block; 
+    text-align: center; 
+    line-height: 50px;
+    width: 100%; 
+    height: 50px; 
+    color: #fff;
+    font-weight: 700;
+}
+.left_gnb>li>ul{
+    display: none;
+}
+.left_gnb>li>ul>li>a{
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+    height: 50px;
+    color: #edbd03;
+    font-size: 16px;
+}
+
+ 
+
+  .sinput {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
+    position: absolute;
+    top: 80px;
+    z-index: 9999;
+  }
+  
+  .sinput:hover,
+  .sinput:focus{
+    border: 1px solid grey;
+    outline: 0;
+    border-radius:0;
+  }
+  .sinput:focus {
+    transition:ease width 0.2s, linear border-radius 0.2s;
+  }
+  
+  .sinput::placeholder {
+    font-size:0;
+    transition:ease 0.1s;
+  }
+  
+  .show {
+    display:block;
+    background-color: #fff;
+    width:100%;
+  }
+  
+  .show::placeholder {
+    font-size:12px;
+  }
+  
+ .mobileser {
+    width: 80px;
+    height: 80px;
+    display: none;
+    height: 80px;
+    background-image: url(../img/seomoon/top/m_search.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+  
 
 
-
-
-
-
-/*main start----------------------------------------*/
-.bmain{
+.bbg{
     width: 100%;
     background-color: #0f0f10;
 }
+/*main start----------------------------------------*/
+
 .msec1{
     max-width: 1600px;
     width:100%;

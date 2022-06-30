@@ -16,8 +16,8 @@ function getAllMemos(callback){
 }
 
  //리스트에 새로운 내용 추가하는 함수
-function insertMemo(content,title,writer,callback){
-    connection.query(`INSERT INTO seomoon(content,created,updated,title,writer) VALUES("${content}",NOW(),NOW(),"${title}","${writer}")`,
+function insertMemo(content,title,writer,view,callback){
+    connection.query(`INSERT INTO seomoon(content,created,updated,title,writer,view) VALUES("${content}",NOW(),NOW(),"${title}","${writer}","view")`,
     (err,result) =>{
       if(err) throw err;
     callback();
@@ -39,6 +39,8 @@ function getMemoById(id,callback){
     callback(ti);
     })
 }
+
+
 
 //리스트를 수정하고 싶을 때 id값이 일치하는 부분을 수정하는 함수 
 function updateMemoById(id,content,title,writer, callback){

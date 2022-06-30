@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/cumoongongzi.css">
     <link rel="stylesheet" href="../css/sumoon_common.css">
     <link rel="stylesheet" href="../css/sumoon_food.css">
@@ -19,74 +23,118 @@
     <link rel="stylesheet" href="../css/sumoon.css">
     <link rel="stylesheet" href="../css/sumoon_main.css">
     <link rel="stylesheet" href="../css/newM.css">
-    <header>    
-        <div class="h_top h_top">
-            <div class="wrap1200_htop wrap1200_htopw">
-                <a href="login">로그인</a>
-                <a href="join">회원가입</a>
-            </div>
+    <div class="h_top">
+        <div class="wrap1200_htop wrap1200_htopw">
+            <a href="login">로그인</a>
+            <a href="join">회원가입</a>
         </div>
-        <div class="top">            
-            <div class="wrap1200_top">
-                <a class="mobilenav" href=""></a>
-                <a class="logo" href="/"></a>
-                <a class="mobileser" href=""></a>
-                <ul class="navi">
-                    <li>
-                        <a class="navi_active" href="intro">야시장소개</a>
-                        <ul class="navi_sub">
-                            <li><a href="">야시장소개</a></li>
-                            <li><a href="">역사 및 개요</a></li>
-                            <li><a href="">오시는 길</a></li>
-                            <li><a href="">투어미션</a></li>
+    </div>
+    <header>
+        <nav class="left_gnbWrap">
+            <div class="mclose_wrap">
+                <a href="#" class="mclose">x</a>
+            </div>
+            <ul class="left_gnb">
+                <li>
+                    <a  href="intro">야시장소개</a>
+                    <ul>
+                        <li><a href="">야시장소개</a></li>
+                        <li><a href="">역사 및 개요</a></li>
+                        <li><a href="">오시는 길</a></li>
+                        <li><a href="">투어미션</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="food">먹거리살거리</a>
+                    <ul>
+                        <li><a href="food">퓨전글로벌</a></li>
+                        <li><a href="">한국정통식</a></li>
+                        <li><a href="">스트릿푸드</a></li>
+                        <li><a href="">살거리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="seespot">볼거리</a>
+                    <ul>
+                        <li><a href="seespot">주요관광지</a></li>
+                        <li><a href="artschool">거리예술학교</a></li>
+                        <li><a href="">행사이벤트안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice">공지사항</a>
+                    <ul>
+                        <li><a href="notice">공지사항</a></li>
+                        <li><a href="">행사안내</a></li>
+                        <li><a href="">언론보도</a></li>
+                        <li><a href="">입점문의</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="m_utill_nav">
+                <li><a href="login">로그인</a></li>
+                <li><a href="join">회원가입</a></li>
+            </ul>
+        </nav>          
+        <div class="wrap1200_top">
+            <div class="mobilenav"></div>
+            <a class="logo" href="/"></a>
+            <div class="mobileser" onclick="toggleClass()"></div>  
+            <input class="sinput" type="text" placeholder="Search">
+            <ul class="navi">
+                <li>
+                    <a class="navi_active" href="intro">야시장소개</a>
+                    <ul class="navi_sub">
+                        <li><a href="">야시장소개</a></li>
+                        <li><a href="">역사 및 개요</a></li>
+                        <li><a href="">오시는 길</a></li>
+                        <li><a href="">투어미션</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="food">먹거리살거리</a>
+                    <ul class="navi_sub">
+                        <li><a href="food">퓨전글로벌</a></li>
+                        <li><a href="">한국정통식</a></li>
+                        <li><a href="">스트릿푸드</a></li>
+                        <li><a href="">살거리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="seespot">볼거리</a>
+                    <ul class="navi_sub">
+                        <li><a href="seespot">주요관광지</a></li>
+                        <li><a href="artschool">거리예술학교</a></li>
+                        <li><a href="">행사이벤트안내</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice">공지사항</a>
+                    <ul class="navi_sub">
+                        <li><a href="notice">공지사항</a></li>
+                        <li><a href="">행사안내</a></li>
+                        <li><a href="">언론보도</a></li>
+                        <li><a href="">입점문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">입점신청</a></li>                
+            </ul>
+            <div class="h_search_wrap">
+                <div class="language">
+                    <a href="">language∨
+                        <ul class="language_sub">
+                            <li><a href="">한국어</a></li>
+                            <li><a href="">ENGLISH</a></li>
+                            <li><a href="">日本語</a></li>
+                            <li><a href="">中文</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="food">먹거리살거리</a>
-                        <ul class="navi_sub">
-                            <li><a href="food">퓨전글로벌</a></li>
-                            <li><a href="">한국정통식</a></li>
-                            <li><a href="">스트릿푸드</a></li>
-                            <li><a href="">살거리</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="seespot">볼거리</a>
-                        <ul class="navi_sub">
-                            <li><a href="seespot">주요관광지</a></li>
-                            <li><a href="artschool">거리예술학교</a></li>
-                            <li><a href="">행사이벤트안내</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="notice">공지사항</a>
-                        <ul class="navi_sub">
-                            <li><a href="notice">공지사항</a></li>
-                            <li><a href="">행사안내</a></li>
-                            <li><a href="">언론보도</a></li>
-                            <li><a href="">입점문의</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">입점신청</a></li>                
-                </ul>
-                <div class="h_search_wrap">
-                    <div class="language">
-                        <a href="">language∨
-                            <ul class="language_sub">
-                                <li><a href="">한국어</a></li>
-                                <li><a href="">ENGLISH</a></li>
-                                <li><a href="">日本語</a></li>
-                                <li><a href="">中文</a></li>
-                            </ul>
-                        </a>
-                    </div>
-                    <div class="h_btn_search">
-                        
-                    </div>
+                    </a>
+                </div>
+                <div class="h_btn_search">
+                    
                 </div>
             </div>
-        </div>    
-       
+        </div>
     </header>
         <main>
             <%- body %>
@@ -126,6 +174,11 @@
                 </div>
             </div>
         </footer>
-
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/525694343d.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/style.js"></script>
     </html>
