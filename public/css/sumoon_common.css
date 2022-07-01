@@ -1,3 +1,6 @@
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
 header{
     width: 100%;
     position: relative;
@@ -16,6 +19,15 @@ header.sticky {
     width: 1200px;
     margin: auto;
 } 
+section{
+    padding: 50px 0;
+}
+.npt{
+    padding-top: 0;
+}
+.npb{
+    padding-bottom: 0;
+}
 .h_top{
     background-color: white;
     width: 100%;   
@@ -59,7 +71,7 @@ header.sticky {
 }
 
 .logo{
-    z-index: 9999;
+    z-index: 997;
     width: 120px;
     height: 80px;
     background-image: url(../img/seomoon/logo.png);
@@ -192,7 +204,7 @@ header.sticky {
     color: white;
     font-weight: 900;
     text-align: center;
-    -webkit-text-stroke: 1px black;
+    text-shadow: 0 0 6px rgb(0 0 0);
 }
 .mnavi{
     width: 100%;
@@ -204,7 +216,7 @@ header.sticky {
 .mnavi>li{
     width: calc(25% - 10px);
     margin-right: 4px;
-    background-color: rgba(75, 23, 122,0.5);
+    background-color: #000;
     box-sizing: border-box;
     text-align: center;
 }
@@ -212,10 +224,18 @@ header.sticky {
     color: yellow;
     font-weight: bold;
 }
+.mnavi>li.active{
+    background-color: rgba(75, 23, 122);
+}
+.mnavi>li.active>a{
+    color: yellow;
+    font-weight: bold;
+}
 .mnavi>li>a{
+    cursor: pointer;
     display: inline-block;
     padding: 10px;    
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-size: 20px;
     box-sizing: border-box;
@@ -240,7 +260,6 @@ main{
     box-sizing: border-box;
 }
 .search_wrap{
-    width: 95%;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
