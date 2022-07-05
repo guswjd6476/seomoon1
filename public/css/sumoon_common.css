@@ -73,6 +73,7 @@ section{
     display: none;
 }
 #user{
+    display: none;
     color: #fff;
 }
 .logo{
