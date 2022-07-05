@@ -69,7 +69,12 @@ section{
     background-size: 100%;
     background-repeat: no-repeat;
 }
-
+#logout{
+    display: none;
+}
+#user{
+    color: #fff;
+}
 .logo{
     z-index: 997;
     width: 120px;

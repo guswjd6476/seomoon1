@@ -146,6 +146,7 @@ iframe{
     padding-right: 10px;
 }
 .spotlist>p{
+    color: #fff;
     text-align:right;
     padding: 20px;
     box-sizing: border-box;
