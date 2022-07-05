@@ -11,7 +11,7 @@ function kakaoLogin(){
                 url:'/v2/user/me',
                 success:function(response){
                     console.log(response);
-                    document.getElementById('user').style.display='block';
+                    document.getElementById('user').style.display='inline-block';
                     document.getElementById('user').innerText = 
                         response.kakao_account.profile.nickname;
                     document.getElementById('login').style.display='none';
