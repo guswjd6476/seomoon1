@@ -7,8 +7,10 @@ function kakaoLogin(){
                 url:'/vs/user/me',
                 success:function(response){
                     console.log(response);
-                        document.getElementById('user').innerText = 
+                    document.getElementById('user').innerText = 
                         response.kakao_account.profile.nickname;
+                    document.getElementById('login').style.display='none';
+                    alert(response.kakao_account.profile.nickname +'님 로그인 되었습니다.')
                 }
             })
         }
