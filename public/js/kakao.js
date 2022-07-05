@@ -14,7 +14,8 @@ function kakaoLogin(){
                     document.getElementById('userbox').style.display='block';
                     document.getElementById('user').innerText = 
                         response.kakao_account.profile.nickname;
-                    document.getElementById('login').style.display='none';
+                    document.getElementById('loginbox').style.display='none';
+                    document.getElementById('join').style.display='none';
                     document.getElementById('logout').style.display='block';
                     alert(response.kakao_account.profile.nickname +'님 로그인 되었습니다.')
                 }
@@ -28,13 +29,11 @@ function kakaoLogout(){
                     url:'/v1/user/unlink',
                     success:function(response){
                         console.log(response);
-                        document.getElementById('user').style.display='none';
-                        document.getElementById('login').style.display='block';
+                        document.getElementById('userbox').style.display='none';
+                        document.getElementById('loginbox').style.display='block';
                         document.getElementById('logout').style.display='none';
+                        document.getElementById('join').style.display='block';
                         alert(response.kakao_account.profile.nickname +'님 로그아웃 되었습니다.')
-                    },
-                    fail: function(error){
-                        console.log(error);
                     }
                 })
         Kakao.Auth.setAccessToken(undefinded);

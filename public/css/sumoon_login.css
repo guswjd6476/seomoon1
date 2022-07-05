@@ -34,6 +34,26 @@ body{
     background-color: rgba(75, 23, 122);
     color: white;
 }
+#login_kakao_button{
+        margin: 0;
+    overflow: visible;
+    font: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-appearance: none;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 12px 27px;
+    font-size: 18px;
+    border-radius: 6px;
+    line-height: 1;
+    background-color:yellow;
+    color: #000;
+    }
 #pre_login_button{
     margin: 0;
     overflow: visible;
