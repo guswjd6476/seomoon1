@@ -72,8 +72,10 @@ section{
 #logout{
     display: none;
 }
-#user{
+.userbox{
     display: none;
+}
+#user{
     color: #fff;
 }
 .logo{
