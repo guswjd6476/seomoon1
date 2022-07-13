@@ -7,6 +7,24 @@ $(window).scroll(function() {
     }
 });
 
+$(function() {
+    var $firstMenu = $('.header_wrap > .wrap1200_top > .navi > li '),
+      $header = $('.scroll_sub');
+  
+    $firstMenu.mouseenter(function() {
+        $header.stop().animate({
+          height: '230px'
+        });
+      })
+      .mouseleave(function() {
+        $header.stop().animate({
+          height: '0px'
+        });
+      });
+  
+  });
+
+
 
 //모바일메뉴
 $(document).ready(function(){
@@ -80,3 +98,16 @@ $(document).ready( function() {
 
 
  
+  $(".tabs_item").hide();
+  $(".tab").each(function () {
+    $(this).children(".tabs>li:first").addClass("active"); 
+    $(this).children(".tabs_item:first").first().show();
+  });
+  $(".tabs li a").click(function () {
+    $(this).parent().siblings("li").removeClass("active");
+    $(this).parent().addClass("active"); 
+    $(this).parent().parent().parent().find(".tabs_item").hide();
+    var activeTab = $(this).attr("rel");
+     $("#" + activeTab).fadeIn();
+  });
+  

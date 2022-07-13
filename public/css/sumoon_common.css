@@ -1,16 +1,32 @@
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+.nopt{
+    padding-top: 0px;
+}
+main{
+    padding-top: 80px;
 }
 header{
     width: 100%;
     position: relative;
-    background-color: rgba(75, 23, 122);
+    z-index: 9999;
 }
 header.sticky {
     position: fixed;
-    background-color: rgba(75, 23, 122, 0.8);
     top: 0px;
     z-index: 999;
+}
+.header_wrap{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(75, 23, 122);
+    border-bottom: 1px solid #717171;
+}
+header.sticky>.header_wrap{
+    background-color: rgba(75, 23, 122, 0.8);
 }
 .wrap100{
     width: 100%;
@@ -86,33 +102,17 @@ section{
 }
 .navi{
     width: calc(100% - 300px);
+    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 10px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .navi>li{
-    position: relative;
-}
-.navi_sub{
-    display: none;
-    position: absolute;
-    left: 50%;
-    min-width: 170px;
-    padding: 30px 10px 10px 10px;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: rgba(75, 23, 122, 0.5);
-}
-.navi_sub>li>a{
-    display: block;
-    padding: 10px;
-    margin: auto;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    box-sizing: border-box;
+    width: 25%;
+    height: 100%;
     text-align: center;
 }
 .navi>li:hover>a{
@@ -125,12 +125,36 @@ section{
     color: yellow;
 }
 .navi>li>a{
+    display: block;
+    height: 100%;
     padding: 0 10px;
+    line-height: 80px;
     margin: auto;
     color: white;
     font-weight: bold;
     font-size: 18px;
     box-sizing: border-box;
+}
+
+.scroll_sub{
+    width: 100%;
+    height: 0px;
+    display: block;
+    position: relative;
+}
+.navi_sub{
+    width: 100%;
+    overflow: hidden;
+}
+.navi_sub>li>a{
+    display: block;
+    padding: 10px;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
 }
 .h_search_wrap{
     display: flex;
@@ -210,7 +234,7 @@ section{
     transform: translate(0,-50%);
     font-size: 38px;
     color: white;
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
     text-shadow: 0 0 6px rgb(0 0 0);
 }
@@ -244,8 +268,8 @@ section{
     display: inline-block;
     padding: 10px;    
     color: #fff;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 18px;
     box-sizing: border-box;
     white-space: nowrap;
 }
@@ -670,11 +694,19 @@ footer{
     .search_wrap{
         width: 95%;        
     }
+    .navi>li>a{
+        font-size: 16px;
+        padding: 0px;
+    }
+    .navi_sub>li>a{
+        font-size: 14px;
+    }
 }
 
 
 
 @media only screen and (max-width: 900px){
+  
     .h_top{
         display: none;
     }
